@@ -1,0 +1,480 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE-edge">
+<meta name="viewport" content="width=device-width, intial-scale=1.0">
+<title>JLN COLLEGE</title>
+<link rel="stylesheet" href="css/style.css"/>
+<!--fav-icon-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<title>OUR Global Campus</title>
+<link rel="shortcut icon" href="images/favicon.png"/>
+<style>
+    /* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .card {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-body {
+      padding: 20px;
+    }
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    width: 400px;
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+</style>
+</head>
+
+<body>
+    
+    <section class="main" style="background-image: url(images/hero-bg.png);">
+        
+        <nav>
+            <h3>CHC     COLLEGE</h3>
+            <input class="menu-btn" type="checkbox" id="menu-btn"/>
+            <label class="menu-icon" for="menu-btn">
+                <span class="nav-icon"></span>
+            </label>
+            <ul class="menu" style="border-radius: 5px;">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Notification</a></li>
+                <li><a href="#">Results</a></li>
+                <li><a href="#">Apply Now</a></li>
+                <li><a class="active" onclick="document.getElementById('id01').style.display='block'" style="width:auto; border-radius: 5px; cursor: pointer;">Login</a></li>
+            </ul>
+        </nav>
+       
+        <!-- login modal start -->
+        <div id="id01" class="modal">
+  
+            <form class="modal-content animate" action="/action_page.php" method="post" style="
+            width: 400px;
+        ">
+              <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <p style="font-size: 22px;">Student Login </p>
+                <hr>
+              </div>
+          
+              <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+          
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+                  
+                <button type="submit">Login</button>
+                <label>
+                  <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+              </div>
+          
+              <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                <span class="psw"><a href="#">Register Here</a></span>
+                <span class="psw" style="margin-right: 11px;"><a href="#">Forgot  password?</a></span>
+              </div>
+            </form>
+          </div>
+        <!-- login modal end  -->
+
+
+        <!--main-content-->
+        <div class="home-content">
+            
+            <!--text-->
+            <div class="home-text" >
+                
+                <h3 style="color: white; letter-spacing: 3px;">Welcome to CHC College</h3>
+                <h1 style="color: white;"> Student Portal</h1>
+                <p style="color: white;">The purpose of Schools is to prepare students with promise
+                    to enhance their intellectual, physical, social, emotional, spiritual,
+                    and artistic growth so that they may realize their power for good
+                    as citizens</p>
+            <!--login-btn-->
+            <a href="#" class="main-login" style="border-radius: 5px;">Apply Now</a>
+            </div>
+            <!--img-->
+            <div class="home-img" style="width: 500px;">
+                <img src="images/hero.png" width="500px" style="text-shadow: 20px 22px;"/>
+                <marquee width="100%" direction="left" onmouseover="this.stop();"
+                onmouseout="this.start();">
+                    <a href="#" style="color: white;">Admission open of 11th December 2023, Stream SN, Accountancy, Criminology and SCS,Educ,Sn,Hospitality.</a>
+                    </marquee>
+                    <marquee width="100%" direction="right" onmouseover="this.stop();"
+                onmouseout="this.start();">
+                    <a href="#" style="color: white;">Admission open of 11th December 2023,SN, Accountancy, Criminology and SCS,Educ,Sn,Hospitality.</a>
+                    </marquee>
+            </div>
+            
+        </div>
+        
+        <!--arrow-->
+        <div class="arrow"></div>
+        <span class="scroll">Scroll</span>
+    </section>
+    
+    <!--services----------------------->
+    <section class="services">
+        <!--heading----------->
+        <div class="services-heading">
+            <h2>OUR PROFESSIONAL COURSES</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur ad asese do eiusmod tempor incididunt utarla oreetdolo magna aliqua</p>
+        </div>
+        <!--box-container----------------->
+        <div class="box-container">
+            <!--box-1-------->
+            <div class="box">
+                <img src="images/EDUC.png">
+                <font>Education Deparment</font>
+                <p>Lorem ipsum dolor sit amet, consectetur ad asese do eiusmod tempor incididunt utarla oreetdolo magna aliqua</p>
+                <!--btn--------->
+                <a href="#">Apply Now</a>
+            </div>
+            <!--box-2-------->
+            <div class="box"> 
+                <img src="images/SCS.png">
+                <font>Consilium Construere Servire</font>
+                <p>Lorem ipsum dolor sit amet, consectetur ad asese do eiusmod tempor incididunt utarla oreetdolo magna aliqua.</p>
+                <!--btn--------->
+                <a href="#">Apply Now</a>
+            </div>
+            <!--box-3-------->
+            <div class="box">
+                <img src="images/SN.png">
+                <font>School of Nursing</font>
+                <p>Lorem ipsum dolor sit amet, consectetur ad asese do eiusmod tempor incididunt utarla oreetdolo magna aliqua</p>
+                <!--btn--------->
+                <a href="#">Apply Now</a>
+            </div>
+            <!--box-4-------->
+            <div class="box">
+                <img src="images/ACCOUNTANCY.png">
+                <font>Accountancy Department </font>
+                <p>Lorem ipsum dolor sit amet, consectetur ad asese do eiusmod tempor incididunt utarla oreetdolo magna aliqua.</p>
+                <!--btn--------->
+                <a href="#">Apply Now</a>
+            </div>
+            <div class="box">
+              <img src="images/hospitality.png">
+              <font>Hospitality Management Department </font>
+              <p>Lorem ipsum dolor sit amet, consectetur ad asese do eiusmod tempor incididunt utarla oreetdolo magna aliqua.</p>
+              <!--btn--------->
+              <a href="#">Apply Now</a>
+          </div>
+          <div class="box">
+            <img src="images/CRIMINAL JUSTICE.png">
+            <font>College Of Criminal Justice Deparment </font>
+            <p>Lorem ipsum dolor sit amet, consectetur ad asese do eiusmod tempor incididunt utarla oreetdolo magna aliqua.</p>
+            <!--btn--------->
+            <a href="#">Apply Now</a>
+        </div>
+            <!--box-1-------->s
+            
+        </div>
+    </section>
+    <div class="container mt-5">
+      <h1 class="text-center mb-4">OUR Global Campus</h1>
+    
+      <div class="row">
+        <!-- Card 1 -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="images/bd.jpg" class="card-img-top" alt="Card Image">
+            <div class="card-body">
+              <h5 class="card-title">Campus Life</h5>
+              <p class="card-text">Experience vibrant campus life with state-of-the-art facilities, engaging events, and a supportive community.</p>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Card 2 -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="images/bd1.jpg" class="card-img-top" alt="Card Image">
+            <div class="card-body">
+              <h5 class="card-title">Global Opportunities</h5>
+              <p class="card-text">Explore global opportunities through our international programs, collaborations, and diverse student body.</p>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Card 3 -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="images/bd2.jpg  " class="card-img-top" alt="Card Image">
+            <div class="card-body">
+              <h5 class="card-title">Cutting-edge Learning</h5>
+              <p class="card-text">Immerse yourself in cutting-edge learning environments with modern classrooms, labs, and innovative teaching methods.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+    <div class="container mt-5">
+      <h1 class="text-center mb-4">OUR Facilities Campus</h1>
+    
+      <div class="row">
+        <!-- Card 1 -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="images/lib1.jpg" class="card-img-top" alt="Card Image">
+            <div class="card-body">
+              <h5 class="card-title">World Class Library</h5>
+              <p class="card-text">Experience vibrant campus life with state-of-the-art facilities, engaging events, and a supportive community.</p>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Card 2 -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="images/lib2.jpg" class="card-img-top" alt="Card Image">
+            <div class="card-body">
+              <h5 class="card-title">Largest Playground</h5>
+              <p class="card-text">Explore global opportunities through our international programs, collaborations, and diverse student body.</p>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Card 3 -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="images/lib3.jpg" class="card-img-top" alt="Card Image">
+            <div class="card-body">
+              <h5 class="card-title">Tasty and Healthy Food</h5>
+              <p class="card-text">Immerse yourself in cutting-edge learning environments with modern classrooms, labs, and innovative teaching methods.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+    <div style="border: 1px solid black; padding: 5rem  ;" class="container mt-5">
+      <h1 class="mb-4">Enroll for Our Various Online Courses</h1>
+    
+      <form>
+        <div class="mb-3">
+          <label for="fullName" class="form-label">Full Name</label>
+          <input type="text" class="form-control" id="fullName" placeholder="Enter your full name" required>
+        </div>
+    
+        <div class="mb-3">
+          <label for="email" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+        </div>
+    
+        <div class="mb-3">
+          <label for="courseSelect" class="form-label">Select Course</label>
+          <select class="form-select" id="courseSelect" required>
+            <option value="" selected disabled>Select a course</option>
+            <option value="course1">Course 1</option>
+            <option value="course2">Course 2</option>
+            <!-- Add more courses as needed -->
+          </select>
+        </div>
+    
+        <button type="submit" class="btn btn-primary">Enroll Now</button>
+      </form>
+    
+      <div class="mt-4">
+        <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#contactModal">
+          Contact Us
+        </button>
+      </div>
+    </div>
+    
+    <!-- Contact Us Modal -->
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>For any inquiries, please feel free to contact us at:</p>
+            <p>Email: info@example.com</p>
+            <p>Phone: +123456789</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- About Us Section -->
+<div class="container mt-5 mx-auto">
+  <div class="row">
+      <div class="col-lg-6">
+          <h2>About Us</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan orci eu tortor cursus, et fermentum libero posuere. Nullam tincidunt, metus eu aliquam commodo, libero sapien ullamcorper sapien, nec fermentum libero orci id lacus.</p>
+          <p>Proin condimentum volutpat lacus, in varius nunc fringilla vel. Phasellus ullamcorper libero id velit laoreet, a tincidunt justo tincidunt. Suspendisse potenti.</p>
+      </div>
+      <!-- Add more columns or content as needed -->
+  </div>
+</div>
+
+    <!--footer------------->
+    <footer>
+        <p>Copyright (C) - 2023 | Developed By <a href="#">Justin Manalo </a> </p>
+    </footer>
+    <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+        </script>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</html>
